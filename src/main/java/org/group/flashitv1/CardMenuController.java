@@ -142,7 +142,6 @@ public class CardMenuController {
             e.printStackTrace();
         }
     }
-
     @FXML
     void logoutApp (ActionEvent event) {
         Platform.exit();

@@ -41,7 +41,6 @@ public class Card extends Application {
         stage.setScene(scene);
         stage.show();
     }
-
     public static void main(String[] args) {
         launch();
     }

@@ -112,7 +112,6 @@ public class CustomCardController {
         }
     }
 
-
     @FXML
     void createNewCard(ActionEvent event) {
         // Check if previousScene is set

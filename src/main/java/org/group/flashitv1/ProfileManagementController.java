@@ -51,6 +51,7 @@ public class ProfileManagementController {
         }
     }
 
+
     @FXML
     void saveChanges(ActionEvent event) {
 

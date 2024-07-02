@@ -105,7 +105,6 @@ public class CardController {
             e.printStackTrace();
         }
     }
-
     @FXML
     void showAnswer(ActionEvent event) {
         if (event.getSource() == bigCard_FrontButton) {
