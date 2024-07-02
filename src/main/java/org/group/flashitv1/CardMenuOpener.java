@@ -9,14 +9,14 @@ import javafx.stage.StageStyle;
 import javafx.scene.input.MouseEvent;
 import java.io.IOException;
 
-public class Card extends Application {
+public class CardMenuOpener extends Application {
 
     private double x = 0;
     private double y = 0;
 
     @Override
     public void start(Stage stage) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("Card.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("CardMenu.fxml"));
 
 
         Scene scene = new Scene(root, 1100, 700);

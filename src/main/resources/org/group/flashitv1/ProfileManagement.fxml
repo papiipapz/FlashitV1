@@ -9,35 +9,72 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane prefHeight="250.0" prefWidth="500.0" style="-fx-background-color: #70bcff;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.group.flashitv1.ProfileManagement">
+<AnchorPane prefHeight="400.0" prefWidth="500.0" style="-fx-background-color: #70bcff;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.group.flashitv1.ProfileManagementController">
    <children>
-      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="0.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <HBox alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="500.0" spacing="200.0">
+            <HBox alignment="CENTER" prefHeight="50.0" prefWidth="500.0">
                <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Create a new FlashIT set:">
+                  <HBox alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Settings">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Text>
+                     </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER_RIGHT" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <padding>
+                        <Insets right="20.0" />
+                     </padding>
+                  </HBox>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Change Profile">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Text>
+            <VBox spacing="5.0">
+               <children>
+                  <Text id="userText" fx:id="userText" strokeType="OUTSIDE" strokeWidth="0.0" text="Username">
                      <font>
-                        <Font name="System Bold" size="20.0" />
+                        <Font name="System Bold" size="12.0" />
                      </font>
                   </Text>
-                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" text="x" />
+                  <TextField id="userInput" fx:id="userInput" promptText="Username" />
+                  <Text id="passText" fx:id="passText" strokeType="OUTSIDE" strokeWidth="0.0" text="Password">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Text>
+                  <TextField id="passInput" fx:id="passInput" promptText="Password" />
+                  <Text id="newPassText" fx:id="newPassText" strokeType="OUTSIDE" strokeWidth="0.0" text="New Password">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Text>
+                  <TextField id="newPassInput" fx:id="newPassInput" promptText="New Password" />
                </children>
                <padding>
-                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-               </padding>
-            </HBox>
-            <VBox alignment="TOP_CENTER" spacing="10.0">
-               <children>
-                  <TextField promptText="Username" />
-                  <TextField promptText="Password" />
-                  <TextField promptText="Change Password" />
-                  <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" text="Save Changes" />
-               </children>
-               <padding>
-                  <Insets left="50.0" right="50.0" />
+                  <Insets bottom="5.0" left="50.0" right="50.0" top="5.0" />
                </padding>
             </VBox>
+            <Button id="saveButton" fx:id="saveButton" mnemonicParsing="false" onAction="#saveChanges" prefHeight="40.0" prefWidth="200.0" text="Save Changes" />
+            <Button id="backButton" fx:id="backButton" mnemonicParsing="false" onAction="#menuButton" prefHeight="40.0" prefWidth="200.0" text="Back to Menu" />
          </children>
       </VBox>
    </children>

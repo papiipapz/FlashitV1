@@ -1,0 +1,77 @@
+.white_background{
+    -fx-background-color: #fff;
+}
+
+.transparent{
+    -fx-background-color: rgba(0, 0, 0, 0);
+}
+
+.round_layout {
+    -fx-border-radius: 20;
+}
+
+.card_Layout{
+    -fx-pref-height: 135;
+    -fx-pref-width: 175;
+    -fx-background-color: #70BCFF;
+    -fx-border-radius: 15;
+}
+
+.buttonLayout{
+    -fx-background-color: #70BCFF;
+}
+
+.buttonLayout:hover{
+    -fx-cursor: hand;
+    -fx-background-color: #91C9FB;
+}
+.buttonLayout:pressed{
+    -fx-background-color: #4A7DAA;
+}
+
+.card_Layout .button{
+    -fx-pref-height: 135;
+    -fx-pref-width: 175;
+    -fx-background-color: #70BCFF;
+    -fx-border-radius: 15;
+}
+
+.card_Layout .button:hover {
+    -fx-cursor: hand;
+    -fx-background-color: #91C9FB;
+}
+
+.card_Layout .button:pressed {
+    -fx-background-color: #4A7DAA;
+}
+
+
+.big_Card_Layout{
+    -fx-pref-height:300;
+    -fx-pref-width: 500;
+    -fx-background-color: #70BCFF;
+    -fx-border-radius: 30;
+    -fx-background-color-radius: 30;
+
+}
+
+.big_ButtonCard_Layout {
+    -fx-pref-height:300;
+    -fx-pref-width: 500;
+    -fx-background-color: #70BCFF;
+    -fx-border-radius: 30;
+    -fx-background-color-radius: 30;
+}
+
+.arrow_Layout{
+    -fx-background-color: rgba(0, 0, 0, 0);
+}
+
+.arrow_Layout:hover{
+    -fx-cursor: hand;
+    -fx-background-color: #91C9FB;
+}
+.arrow_Layout:pressed{
+    -fx-background-color: #4A7DAA;
+}
+

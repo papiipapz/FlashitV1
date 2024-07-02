@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1100.0" style="-fx-background-color: #DDE9F1;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.group.flashitv1.CardMenuController">
+   <children>
+      <VBox alignment="CENTER" layoutX="377.0" layoutY="117.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox id="navBar" fx:id="navBar" alignment="CENTER" prefHeight="80.0" style="-fx-background-color: #70BCFF;">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Button id="homeButton" fx:id="homeButton" mnemonicParsing="false" styleClass="buttonLayout" stylesheets="@../../../css/styles.css">
+                           <graphic>
+                              <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" styleClass="buttonLayout">
+                                 <image>
+                                    <Image url="@../../../images/image-removebg-preview%20(1)%20(1).png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="10.0" HBox.hgrow="ALWAYS">
+                     <padding>
+                        <Insets right="10.0" />
+                     </padding>
+                     <children>
+                        <Button id="deleteCardButton" fx:id="deleteCardButton" maxHeight="60.0" mnemonicParsing="false" styleClass="buttonLayout" stylesheets="@../../../css/styles.css" text="Delete Card">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button id="logoutButton" fx:id="logoutButton" maxHeight="60.0" mnemonicParsing="false" onAction="#logoutApp" styleClass="buttonLayout" stylesheets="@../../../css/styles.css" text="Logout" textFill="#e61d23">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button id="profileButton" fx:id="profileButton" alignment="CENTER" maxHeight="60.0" mnemonicParsing="false" onAction="#manageProfile" styleClass="buttonLayout" stylesheets="@../../../css/styles.css">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../images/Icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </HBox>
+               </children>
+            </HBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #DDE9F1;" VBox.vgrow="ALWAYS">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="100.0">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets top="50.0" />
+                     </padding>
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="15.0" HBox.hgrow="ALWAYS">
+                           <padding>
+                              <Insets left="50.0" />
+                           </padding>
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Your Cards">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="15.0" HBox.hgrow="ALWAYS">
+                           <padding>
+                              <Insets right="50.0" />
+                           </padding>
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Categories:">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                              </Text>
+                              <ComboBox id="categoriesComboBox" fx:id="categoriesComboBox" prefWidth="150.0" promptText="Categories" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <ScrollPane id="scrollPane" fx:id="scrollPane" prefHeight="200.0" prefWidth="200.0" styleClass="transparent" stylesheets="@../../../css/styles.css" VBox.vgrow="ALWAYS">
+                     <content>
+                        <FlowPane id="cardsContainer" fx:id="cardsContainer" hgap="30.0" prefHeight="478.0" prefWidth="1084.0" style="-fx-background-color: #DDE9F1;" vgap="20.0">
+                           <padding>
+                              <Insets bottom="10.0" left="50.0" top="10.0" />
+                           </padding>
+                           <children>
+                              <Button id="createNewCard" fx:id="createNewCard" mnemonicParsing="false" onAction="#openNewCard" prefHeight="135.0" prefWidth="175.0" styleClass="round_layout" stylesheets="@../../../css/styles.css" text="Create Card" wrapText="true">
+                                 <font>
+                                    <Font size="19.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </FlowPane>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </VBox>
+            <HBox alignment="CENTER" prefHeight="50.0" style="-fx-background-color: #B3BDC3;">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="© 2024 PaLoMi, Group 3 Project for Parallel and Distributed Computing " />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
