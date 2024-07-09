@@ -12,7 +12,6 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1100.0" style="-fx-background-color: #DDE9F1;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.group.flashitv1.CardController">
    <children>
       <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -24,12 +23,12 @@
                         <Insets left="20.0" />
                      </padding>
                      <children>
-                        <Button mnemonicParsing="false" styleClass="buttonLayout" stylesheets="@../../../css/styles.css">
+                        <Button fx:id="returnMainButton" mnemonicParsing="false" onAction="#returnToMenu" styleClass="buttonLayout" stylesheets="@../../../css/styles.css">
                            <font>
                               <Font size="20.0" />
                            </font>
                            <graphic>
-                              <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fx:id="flashLogo" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../../../images/image-removebg-preview%20(1)%20(1).png" />
                                  </image>
@@ -46,7 +45,7 @@
                         <Insets right="20.0" />
                      </padding>
                      <children>
-                        <Button id="deleteButton" fx:id="deleteButton" maxHeight="60.0" mnemonicParsing="false" styleClass="buttonLayout" stylesheets="@../../../css/styles.css" text="Delete Card" textFill="#e61d23">
+                        <Button id="deleteButton" fx:id="deleteButton" maxHeight="60.0" mnemonicParsing="false" onAction="#deleteCurrentCard" styleClass="buttonLayout" stylesheets="@../../../css/styles.css" text="Delete Card" textFill="#e61d23">
                            <font>
                               <Font name="System Bold" size="15.0" />
                            </font>
@@ -90,30 +89,11 @@
                            <padding>
                               <Insets left="50.0" />
                            </padding>
-                           <children>
-                              <Text id="cardTitle" fx:id="cardTitle" strokeType="OUTSIDE" strokeWidth="0.0" text="Card Title">
-                                 <font>
-                                    <Font name="System Bold" size="24.0" />
-                                 </font>
-                              </Text>
-                           </children>
                         </HBox>
                         <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="15.0" HBox.hgrow="ALWAYS">
                            <padding>
                               <Insets right="50.0" />
                            </padding>
-                           <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Category:">
-                                 <font>
-                                    <Font name="System Bold" size="24.0" />
-                                 </font>
-                              </Text>
-                              <Text id="categoryText" fx:id="categoryText" strokeType="OUTSIDE" strokeWidth="0.0" text="Animal">
-                                 <font>
-                                    <Font size="24.0" />
-                                 </font>
-                              </Text>
-                           </children>
                         </HBox>
                      </children>
                   </HBox>
@@ -121,7 +101,7 @@
                      <children>
                         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="30.0" VBox.vgrow="ALWAYS">
                            <children>
-                              <Button id="previousButton" fx:id="previousButton" mnemonicParsing="false" styleClass="arrow_Layout" stylesheets="@../../../css/styles.css">
+                              <Button id="previousButton" fx:id="previousButton" mnemonicParsing="false" onAction="#showPreviousCard" styleClass="arrow_Layout" stylesheets="@../../../css/styles.css">
                                  <graphic>
                                     <ImageView fx:id="leftButton" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -138,9 +118,9 @@
                               </Button>
                               <StackPane id="bigCard" fx:id="bigCard" maxHeight="300.0" maxWidth="500.0" styleClass="big_Card_Layout" stylesheets="@../../../css/styles.css">
                                  <children>
-                                    <VBox id="bigCard_Back" fx:id="bigCard_Back" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" styleClass="big_Card_Layout" stylesheets="@../../../css/styles.css" visible="false">
+                                    <VBox id="bigCard_Back" fx:id="bigCard_Back" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-radius: 30;" styleClass="big_Card_Layout" stylesheets="@../../../css/styles.css" visible="false">
                                        <children>
-                                          <Button id="bigCard_BackButton" fx:id="bigCard_BackButton" mnemonicParsing="false" onAction="#showAnswer" styleClass="big_ButtonCard_Layout" stylesheets="@../../../css/styles.css" text="Answer" visible="false" wrapText="true">
+                                          <Button id="bigCard_BackButton" fx:id="bigCard_BackButton" mnemonicParsing="false" onAction="#flipCard" style="-fx-background-radius: 30;" styleClass="big_ButtonCard_Layout" stylesheets="@../../../css/styles.css" text="Answer" visible="false" wrapText="true">
                                              <cursor>
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
@@ -150,9 +130,9 @@
                                           </Button>
                                        </children>
                                     </VBox>
-                                    <VBox id="bigCard_Front" fx:id="bigCard_Front" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" styleClass="big_Card_Layout" stylesheets="@../../../css/styles.css">
+                                    <VBox id="bigCard_Front" fx:id="bigCard_Front" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-radius: 30;" styleClass="big_Card_Layout" stylesheets="@../../../css/styles.css">
                                        <children>
-                                          <Button id="bigCard_FrontButton" fx:id="bigCard_FrontButton" mnemonicParsing="false" onAction="#showAnswer" styleClass="big_ButtonCard_Layout" stylesheets="@../../../css/styles.css" text="Question" wrapText="true">
+                                          <Button id="bigCard_FrontButton" fx:id="bigCard_FrontButton" mnemonicParsing="false" onAction="#flipCard" style="-fx-background-radius: 100;" styleClass="big_ButtonCard_Layout" stylesheets="@../../../css/styles.css" text="Question" textAlignment="CENTER" wrapText="true">
                                              <cursor>
                                                 <Cursor fx:constant="HAND" />
                                              </cursor>
@@ -164,9 +144,9 @@
                                     </VBox>
                                  </children>
                               </StackPane>
-                              <Button id="rightButton" fx:id="rightButton" mnemonicParsing="false" styleClass="arrow_Layout" stylesheets="@../../../css/styles.css">
+                              <Button id="rightButton" fx:id="rightButton" mnemonicParsing="false" onAction="#showNextCard" styleClass="arrow_Layout" stylesheets="@../../../css/styles.css">
                                  <graphic>
-                                    <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fx:id="nextRight" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@../../../images/RightUnhovered.png" />
                                        </image>
@@ -183,7 +163,7 @@
                         </HBox>
                         <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0">
                            <children>
-                              <Text id="pageNo" fx:id="pageNo" strokeType="OUTSIDE" strokeWidth="0.0" text="10/10">
+                              <Text id="pageNo" fx:id="pageNo" strokeType="OUTSIDE" strokeWidth="0.0" text="1">
                                  <font>
                                     <Font name="System Bold" size="18.0" />
                                  </font>

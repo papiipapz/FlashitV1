@@ -14,7 +14,6 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1100.0" style="-fx-background-color: #DDE9F1;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.group.flashitv1.CardMenuController">
    <children>
       <VBox alignment="CENTER" layoutX="377.0" layoutY="117.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -23,9 +22,9 @@
                <children>
                   <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
                      <children>
-                        <Button id="homeButton" fx:id="homeButton" mnemonicParsing="false" styleClass="buttonLayout" stylesheets="@../../../css/styles.css">
+                        <Button id="homeButton" fx:id="homeButton" mnemonicParsing="false" onAction="#refreshDecks" styleClass="buttonLayout" stylesheets="@../../../css/styles.css">
                            <graphic>
-                              <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" styleClass="buttonLayout">
+                              <ImageView fx:id="flashLogo" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" styleClass="buttonLayout">
                                  <image>
                                     <Image url="@../../../images/image-removebg-preview%20(1)%20(1).png" />
                                  </image>
@@ -48,7 +47,7 @@
                         <Insets right="10.0" />
                      </padding>
                      <children>
-                        <Button id="deleteCardButton" fx:id="deleteCardButton" maxHeight="60.0" mnemonicParsing="false" styleClass="buttonLayout" stylesheets="@../../../css/styles.css" text="Delete Card">
+                        <Button id="deleteCardButton" fx:id="deleteDeckButton" maxHeight="60.0" mnemonicParsing="false" onAction="#toggleDeleteMode" styleClass="buttonLayout" stylesheets="@../../../css/styles.css" text="Delete Deck">
                            <font>
                               <Font name="System Bold" size="15.0" />
                            </font>
@@ -72,7 +71,7 @@
                               <Cursor fx:constant="HAND" />
                            </cursor>
                            <graphic>
-                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fx:id="profileLogo" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../../../images/Icon.png" />
                                  </image>
@@ -101,7 +100,7 @@
                               <Insets left="50.0" />
                            </padding>
                            <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Your Cards">
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Your Decks">
                                  <font>
                                     <Font name="System Bold" size="24.0" />
                                  </font>
@@ -130,7 +129,7 @@
                               <Insets bottom="10.0" left="50.0" top="10.0" />
                            </padding>
                            <children>
-                              <Button id="createNewCard" fx:id="createNewCard" mnemonicParsing="false" onAction="#openNewCard" prefHeight="135.0" prefWidth="175.0" styleClass="round_layout" stylesheets="@../../../css/styles.css" text="Create Card" wrapText="true">
+                              <Button id="createNewCard" fx:id="createNewCard" mnemonicParsing="false" onAction="#openNewCard" prefHeight="135.0" prefWidth="175.0" style="-fx-background-color: #ffffff;" styleClass="deck_button" stylesheets="@../../../css/styles.css" text="Create Card" wrapText="true">
                                  <font>
                                     <Font size="19.0" />
                                  </font>

@@ -1,39 +1,49 @@
-.white_background{
+.white_background {
     -fx-background-color: #fff;
 }
 
-.transparent{
+.transparent {
     -fx-background-color: rgba(0, 0, 0, 0);
 }
 
 .round_layout {
+    -fx-background-color: #70BCFF;
     -fx-border-radius: 20;
 }
 
-.card_Layout{
+.card_Layout {
     -fx-pref-height: 135;
     -fx-pref-width: 175;
     -fx-background-color: #70BCFF;
     -fx-border-radius: 15;
+    -fx-background-radius: 15; /* Add this for background rounding */
 }
 
-.buttonLayout{
+.buttonLayout {
     -fx-background-color: #70BCFF;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10; /* Add this for background rounding */
 }
 
-.buttonLayout:hover{
+.buttonLayout:hover {
     -fx-cursor: hand;
     -fx-background-color: #91C9FB;
-}
-.buttonLayout:pressed{
-    -fx-background-color: #4A7DAA;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10; /* Add this for background rounding */
 }
 
-.card_Layout .button{
+.buttonLayout:pressed {
+    -fx-background-color: #4A7DAA;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10; /* Add this for background rounding */
+}
+
+.card_Layout .button {
     -fx-pref-height: 135;
     -fx-pref-width: 175;
     -fx-background-color: #70BCFF;
     -fx-border-radius: 15;
+    -fx-background-radius: 15; /* Add this for background rounding */
 }
 
 .card_Layout .button:hover {
@@ -45,34 +55,59 @@
     -fx-background-color: #4A7DAA;
 }
 
-
-.big_Card_Layout{
-    -fx-pref-height:300;
+.big_Card_Layout {
+    -fx-pref-height: 300;
     -fx-pref-width: 500;
     -fx-background-color: #70BCFF;
-    -fx-border-radius: 30;
-    -fx-background-color-radius: 30;
-
+    -fx-background-radius: 30; /* Corrected property */
+    -fx-border-radius: 30; /* Consistent rounding */
 }
 
 .big_ButtonCard_Layout {
-    -fx-pref-height:300;
+    -fx-pref-height: 300;
     -fx-pref-width: 500;
     -fx-background-color: #70BCFF;
-    -fx-border-radius: 30;
-    -fx-background-color-radius: 30;
+    -fx-background-radius: 30; /* Corrected property */
+    -fx-border-radius: 30; /* Consistent rounding */
 }
 
-.arrow_Layout{
+.arrow_Layout {
     -fx-background-color: rgba(0, 0, 0, 0);
 }
 
-
-.arrow_Layout:hover{
+.arrow_Layout:hover {
     -fx-cursor: hand;
     -fx-background-color: #91C9FB;
 }
-.arrow_Layout:pressed{
+
+.arrow_Layout:pressed {
     -fx-background-color: #4A7DAA;
 }
 
+.deck_button {
+    -fx-background-color: #70BCFF; /* cyan background */
+    -fx-border-radius: 10; /* rounded corners */
+    -fx-background-radius: 10;
+    -fx-font-size: 19px;
+    -fx-font-weight: bold;
+    -fx-pref-width: 175px;
+    -fx-pref-height: 135px;
+    -fx-text-wrap: true;
+    -fx-cursor: hand;
+    -fx-padding: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 5, 0, 2, 2);
+}
+
+.transparent {
+    -fx-background: transparent;
+    -fx-background-color: transparent;
+}
+
+.delete_button {
+    -fx-background-color: #ff4d4d; /* Red background */
+    -fx-text-fill: white; /* White text */
+    -fx-font-size: 16px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-cursor: hand;
+}
