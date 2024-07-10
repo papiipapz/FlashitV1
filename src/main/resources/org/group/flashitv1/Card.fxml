@@ -16,65 +16,6 @@
    <children>
       <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <HBox alignment="CENTER" prefHeight="80.0" prefWidth="1114.0" style="-fx-background-color: #70bcff;">
-               <children>
-                  <HBox alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="556.0" HBox.hgrow="NEVER">
-                     <padding>
-                        <Insets left="20.0" />
-                     </padding>
-                     <children>
-                        <Button fx:id="returnMainButton" mnemonicParsing="false" onAction="#returnToMenu" styleClass="buttonLayout" stylesheets="@../../../css/styles.css">
-                           <font>
-                              <Font size="20.0" />
-                           </font>
-                           <graphic>
-                              <ImageView fx:id="flashLogo" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../../../images/image-removebg-preview%20(1)%20(1).png" />
-                                 </image>
-                              </ImageView>
-                           </graphic>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Button>
-                     </children>
-                  </HBox>
-                  <HBox alignment="CENTER_RIGHT" prefHeight="80.0" prefWidth="556.0" spacing="20.0" HBox.hgrow="NEVER">
-                     <padding>
-                        <Insets right="20.0" />
-                     </padding>
-                     <children>
-                        <Button id="deleteButton" fx:id="deleteButton" maxHeight="60.0" mnemonicParsing="false" onAction="#deleteCurrentCard" styleClass="buttonLayout" stylesheets="@../../../css/styles.css" text="Delete Card" textFill="#e61d23">
-                           <font>
-                              <Font name="System Bold" size="15.0" />
-                           </font>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Button>
-                        <Button id="profileButton" fx:id="profileButton" maxHeight="60.0" mnemonicParsing="false" onAction="#manageProfile" styleClass="buttonLayout" stylesheets="@../../../css/styles.css">
-                           <font>
-                              <Font size="20.0" />
-                           </font>
-                           <graphic>
-                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../../../images/Icon.png" />
-                                 </image>
-                                 <cursor>
-                                    <Cursor fx:constant="HAND" />
-                                 </cursor>
-                              </ImageView>
-                           </graphic>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Button>
-                     </children>
-                  </HBox>
-               </children>
-            </HBox>
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #DDE9F1;" VBox.vgrow="ALWAYS">
                <children>
                   <HBox alignment="CENTER" prefHeight="100.0">
@@ -181,5 +122,64 @@
             </HBox>
          </children>
       </VBox>
+      <HBox fx:id="navbar2" alignment="CENTER" prefHeight="80.0" prefWidth="1100.0" styleClass="navbar" stylesheets="@../../../css/styles.css">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="556.0" HBox.hgrow="NEVER">
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+               <children>
+                  <Button fx:id="returnMainButton" mnemonicParsing="false" onAction="#returnToMenu" styleClass="buttonLayout" stylesheets="@../../../css/styles.css">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="flashLogo" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/image-removebg-preview%20(1)%20(1).png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox fx:id="navbar" alignment="CENTER_RIGHT" prefHeight="80.0" prefWidth="556.0" spacing="20.0" HBox.hgrow="NEVER">
+               <padding>
+                  <Insets right="20.0" />
+               </padding>
+               <children>
+                  <Button id="deleteButton" fx:id="deleteButton" maxHeight="60.0" mnemonicParsing="false" onAction="#deleteCurrentCard" styleClass="buttonLayout" stylesheets="@../../../css/styles.css" text="Delete Card" textFill="#e61d23">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button id="profileButton" fx:id="profileButton" maxHeight="60.0" mnemonicParsing="false" onAction="#manageProfile" styleClass="buttonLayout" stylesheets="@../../../css/styles.css">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/Icon.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
    </children>
 </AnchorPane>

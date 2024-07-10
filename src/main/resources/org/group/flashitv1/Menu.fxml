@@ -15,7 +15,7 @@
 
 <AnchorPane prefHeight="800.0" prefWidth="1114.0" style="-fx-background-color: #DDE9F1;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.group.flashitv1.menuFlash">
    <children>
-      <HBox alignment="CENTER" prefHeight="80.0" prefWidth="1114.0" style="-fx-background-color: #70bcff;" AnchorPane.bottomAnchor="720.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <HBox fx:id="navbar1" alignment="CENTER" prefHeight="80.0" prefWidth="1114.0" styleClass="navbar" stylesheets="@../../../css/styles.css" AnchorPane.bottomAnchor="720.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <HBox alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="556.0" HBox.hgrow="NEVER">
                <padding>
@@ -39,7 +39,7 @@
                   </Button>
                </children>
             </HBox>
-            <HBox alignment="CENTER_RIGHT" prefHeight="80.0" prefWidth="556.0" spacing="20.0" HBox.hgrow="NEVER">
+            <HBox fx:id="nav" alignment="CENTER_RIGHT" prefHeight="80.0" prefWidth="556.0" spacing="20.0" HBox.hgrow="NEVER">
                <padding>
                   <Insets right="20.0" />
                </padding>
